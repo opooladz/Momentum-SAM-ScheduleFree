@@ -1,7 +1,13 @@
 # Momentum-SAM-ScheduleFree
 Initial run showing we can find a very flat solution (sometimes) using MSAM and schedule free combined in [colab nb](https://colab.research.google.com/drive/1SWsIn1L2vc0AuWnAybO5pJmMGvPDE5Q6?usp=sharing)
+
 ![image](https://github.com/user-attachments/assets/67cd0cd4-305b-43aa-80a0-7babd42f09f4)
+
 Note: Adam in above is actually Adamized Schedlue-Free Momentum-SAM 
+
+This shows that Adamized Schedlue-Free Momentum-SAM usually finds worse solutions in terms of train and test cross entropy compared to [PSGD](https://github.com/lixilinx/psgd_torch/tree/master), but can often find flatter solutions than it. 
+
+This might be due to the two steps for every 1 step allowed for PSGD. 
 
 # Combined AdamW-MSAM-ScheduleFree Optimizer Formula 
 
