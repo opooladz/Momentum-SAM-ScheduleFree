@@ -7,7 +7,7 @@ Note: Adam in above is actually Adamized Schedlue-Free Momentum-SAM
 
 This shows that Adamized Schedlue-Free Momentum-SAM usually finds worse solutions in terms of train and test cross entropy compared to [PSGD](https://github.com/lixilinx/psgd_torch/tree/master), but can often find flatter solutions than it. 
 
-This might be due to the two steps for every 1 step allowed for PSGD. 
+This might be due to the two backwards for every 1 backward allowed for PSGD. 
 
 # Combined AdamW-MSAM-ScheduleFree Optimizer Formula 
 
