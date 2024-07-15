@@ -65,3 +65,32 @@ This formula combines:
 - The momentum-based sharpness-aware ascent step from MSAM
 - The schedule-free adaptive learning rate and parameter interpolation
 
+
+## Training code style 
+   ```python
+   optimizer.train()
+   for epoch in range(num_epochs):
+       for batch in dataloader:
+           optimizer.zero_grad()
+           
+           # First forward-backward pass
+           outputs = model(batch)
+           loss = criterion(outputs, targets)
+           loss.backward()
+           
+           # SAM-like ascent step
+           optimizer.move_to_ascent()
+           
+           # Second forward-backward pass
+           outputs = model(batch)
+           loss = criterion(outputs, targets)
+           loss.backward()
+           
+           # Move back and update
+           optimizer.move_from_ascent()
+           optimizer.step()
+   
+       # Evaluation
+       optimizer.eval()
+       # ... perform evaluation ...
+       optimizer.train()
