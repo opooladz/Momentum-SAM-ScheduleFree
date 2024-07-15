@@ -1,4 +1,5 @@
 # Momentum-SAM-ScheduleFree
+Initial run showing we can find a very flat solution (sometimes) using MSAM and schedule free combined in [colab nb](https://colab.research.google.com/drive/1SWsIn1L2vc0AuWnAybO5pJmMGvPDE5Q6?usp=sharing)
 
 # Combined AdamW-MSAM-ScheduleFree Optimizer Formula 
 
